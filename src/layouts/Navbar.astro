@@ -17,12 +17,12 @@ import { Image } from '@astrojs/image/components';
       <li class='hidden lg:block'><a href='/' class='py-4 px-2 font-semibold hover:text-primary'>Portfolio</a></li>
       <li class='hidden lg:block'><a href='/' class='py-4 px-2 font-semibold hover:text-primary'>Contact</a></li>
       <li class='lg:hidden'>
-        <button class='h-6 w-6' id='menuBtn'>
+        <button class='h-6 w-6' id='menuBtn' aria-label='toggle-menu'>
           <Icon name='mdi:menu' />
         </button>
       </li>
       <li>
-        <button class='h-6 w-6' id='themeBtn'>
+        <button class='h-6 w-6' id='themeBtn' aria-label='toggle-theme'>
           <Icon name='mdi:white-balance-sunny' class='hover:text-primary dark:hidden' />
           <Icon name='mdi:moon-waning-crescent' class='hover:text-primary hidden dark:block' />
         </button>
@@ -40,6 +40,7 @@ import { Image } from '@astrojs/image/components';
     </a>
     <button
       id='closeBtn'
+      aria-label='close-menu'
       class='h-10 w-10 rounded-full bg-bg-light-2 text-darker dark:bg-dark dark:text-white grid place-content-center'>
       <Icon name='mdi:close' class='w-6 h-6' />
     </button>

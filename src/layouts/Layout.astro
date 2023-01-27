@@ -17,6 +17,7 @@ const { title } = Astro.props;
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='generator' content={Astro.generator} />
+    <meta name='description' content='company landing page' />
     <title>{title}</title>
   </head>
   <body class='bg-white text-body-light dark:text-body dark:bg-dark min-h-[300vh]'>
@@ -34,7 +35,8 @@ const { title } = Astro.props;
     </main>
     <button
       class='bg-bg-light-2 dark:bg-darkest rounded-full w-12 h-12 fixed z-10 right-8 bottom-8 hidden place-content-center'
-      id='scrollTopBtn'>
+      id='scrollTopBtn'
+      aria-label='scroll-to-top'>
       <Icon name='mdi:arrow-up' class='w-6 h-6' />
     </button>
     <Footer />
