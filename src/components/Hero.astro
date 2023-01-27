@@ -1,6 +1,10 @@
+---
+import { Image } from '@astrojs/image/components';
+---
+
 <section class='min-h-[calc(100vh-77px)] grid place-content-center border-b border-border py-14'>
   <div class='flex gap-2 items-center flex-col lg:flex-row'>
-    <div>
+    <div class='flex-[2]'>
       <h1 class='text-7xl font-bold mb-4'>
         <span class='clip bg-gradient-to-tr from-tertiary via-pink to-secondary text-transparent'>Digi-Inn</span>
       </h1>
@@ -20,8 +24,8 @@
         Our Services &rarr;</a
       >
     </div>
-    <div>
-      <img src='/hero.gif' alt='hero' />
+    <div class='flex-1'>
+      <Image src='/hero.png' format='png' height={443} width={443} alt='hero' />
     </div>
   </div>
 </section>

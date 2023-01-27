@@ -1,3 +1,7 @@
+---
+import { Image } from '@astrojs/image/components';
+---
+
 <section class='min-h-[calc(100vh-77px)] grid place-content-center border-b border-border py-14'>
   <div class='text-center'>
     <div class='dark:bg-darkest px-4 py-1 rounded-lg font-bold w-max mx-auto mb-3'>
@@ -19,7 +23,15 @@
       <div
         class='absolute w-full h-full [transform-style:preserve-3d] duration-700 group-hover:[transform:rotateY(190deg)]'>
         <div>
-          <img src='/attract.jpg' alt='attract' class='absolute inset-0 w-full h-full object-cover' />
+          <Image
+            fit='cover'
+            height={300}
+            width={300}
+            format='jpg'
+            src='/attract.jpg'
+            alt='attract'
+            class='absolute inset-0'
+          />
           <h4 class='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold text-3xl'>Attract</h4>
         </div>
         <div
@@ -39,7 +51,15 @@
       <div
         class='absolute w-full h-full [transform-style:preserve-3d] duration-700 group-hover:[transform:rotateY(190deg)]'>
         <div>
-          <img src='/convert.jpg' alt='convert' class='absolute inset-0 w-full h-full object-cover' />
+          <Image
+            fit='cover'
+            height={300}
+            width={300}
+            format='jpg'
+            src='/convert.jpg'
+            alt='convert'
+            class='absolute inset-0'
+          />
           <h4 class='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold text-3xl'>Convert</h4>
         </div>
         <div
@@ -59,7 +79,15 @@
       <div
         class='absolute w-full h-full [transform-style:preserve-3d] duration-700 group-hover:[transform:rotateY(190deg)]'>
         <div>
-          <img src='/analyze.jpg' alt='analyze' class='absolute inset-0 w-full h-full object-cover' />
+          <Image
+            fit='cover'
+            height={300}
+            width={300}
+            format='jpg'
+            src='/analyze.jpg'
+            alt='analyze'
+            class='absolute inset-0'
+          />
           <h4 class='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold text-3xl'>Analyze</h4>
         </div>
         <div

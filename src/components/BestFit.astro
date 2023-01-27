@@ -1,5 +1,6 @@
 ---
 import FiveStars from './FiveStars.astro';
+import { Image } from '@astrojs/image/components';
 ---
 
 <section class='text-center min-h-[calc(100vh-77px)] grid place-content-center border-b border-border py-14'>
@@ -21,21 +22,21 @@ import FiveStars from './FiveStars.astro';
   </p>
   <div class='flex items-center justify-center flex-col lg:flex-row'>
     <div>
-      <img src='/bestfit-1.png' alt='social' width='371' height='372' />
+      <Image format='png' src='/bestfit-1.png' alt='social' width={371} height={372} />
       <div class='-mt-10'>
         <h3 class='dark:text-white text-black font-bold text-2xl mb-3'>Social Media Marketing</h3>
         <FiveStars />
       </div>
     </div>
     <div>
-      <img src='/bestfit-2.png' alt='social' width='371' height='372' />
+      <Image format='png' src='/bestfit-2.png' alt='social' width={371} height={372} />
       <div class='-mt-10'>
         <h3 class='dark:text-white text-black font-bold text-2xl mb-3'>Software Development</h3>
         <FiveStars />
       </div>
     </div>
     <div>
-      <img src='/bestfit-3.png' alt='social' width='371' height='372' />
+      <Image format='png' src='/bestfit-3.png' alt='social' width={371} height={372} />
       <div class='-mt-10'>
         <h3 class='dark:text-white text-black font-bold text-2xl mb-3'>Website Development</h3>
         <FiveStars />

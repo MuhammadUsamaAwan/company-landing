@@ -1,12 +1,13 @@
 ---
 import { Icon } from 'astro-icon';
+import { Image } from '@astrojs/image/components';
 ---
 
 <nav class='fixed w-full top-0 z-10 bg-bg-light dark:bg-dark border-b border-border'>
   <div class='flex items-center justify-between px-4 xl:max-w-6xl lg:max-w-4xl md:max-w-2xl mx-auto'>
     <a href='/' class='py-4'>
-      <img src='/logo.png' alt='logo' width='137' height='45' class='hidden dark:block' />
-      <img src='/logo-light.png' alt='logo' width='137' height='45' class='dark:hidden' />
+      <Image src='/logo.png' alt='logo' format='png' width={137} height={45} class='hidden dark:block' />
+      <Image src='/logo-light.png' alt='logo' format='png' width={137} height={45} class='dark:hidden' />
     </a>
     <ul class='flex space-x-6'>
       <li class='hidden lg:block'><a href='/' class='py-4 px-2 font-semibold hover:text-primary'>Home</a></li>
