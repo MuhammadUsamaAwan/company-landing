@@ -1,0 +1,114 @@
+<section class='min-h-[calc(100vh-77px)] grid place-content-center border-b border-border py-14'>
+  <div>
+    <div class='dark:bg-darkest px-4 py-1 rounded-lg font-bold w-max mx-auto mb-3'>
+      <span class='clip bg-gradient-to-tr from-tertiary via-pink to-secondary text-transparent inline-block'>
+        Why Choose Us.
+      </span>
+    </div>
+    <h2 class='text-4xl font-bold mb-6 dark:text-white text-black text-center'>
+      <span class='clip bg-gradient-to-tr from-tertiary via-pink to-secondary text-transparent'
+        >Digi-Inn Leader Board Topper</span
+      ><span> among the Digital<br />Marketing and Web & App Development Companies</span>
+    </h2>
+    <div class='flex space-x-6 flex-col lg:flex-row'>
+      <div class='flex flex-col lg:space-y-8 space-x-4 justify-center flex-1'>
+        <div
+          class='bg-white dark:bg-blackest hover:bg-white hover:dark:bg-blackest rounded-lg px-6 py-8 relative group cursor-pointer duration-200'
+          id='firstBox'>
+          <h4 class='dark:text-white text-xl font-bold mb-2'>A Keen eye for details</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora neque, dolor suscipit eius fugit inventore
+            provident quam magni id aliquam error nulla aspernatur eum enim impedit nesciunt iusto perferendis quis?
+          </p>
+          <div
+            class='border-t-[1rem] border-b-[1rem] border-l-[1rem] border-transparent border-l-white dark:border-l-darkest group-hover:border-l-white dark:group-hover:border-l-darkest w-0 h-0 absolute top-1/2 -translate-y-1/2 -right-4 duration-200'
+            id='firstBoxCursor'>
+          </div>
+        </div>
+        <div
+          class='hover:bg-white hover:dark:bg-blackest rounded-lg px-6 py-8 relative group cursor-pointer duration-200'
+          id='secondBox'>
+          <h4 class='dark:text-white text-xl font-bold mb-2'>A Keen eye for details</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora neque, dolor suscipit eius fugit inventore
+            provident quam magni id aliquam error nulla aspernatur eum enim impedit nesciunt iusto perferendis quis?
+          </p>
+          <div
+            class='border-t-[1rem] border-b-[1rem] border-l-[1rem] border-transparent group-hover:border-l-white dark:group-hover:border-l-darkest w-0 h-0 absolute top-1/2 -translate-y-1/2 -right-4 duration-200'
+            id='secondBoxCursor'>
+          </div>
+        </div>
+        <div
+          class='hover:bg-white hover:dark:bg-blackest rounded-lg px-6 py-8 relative group cursor-pointer duration-200'
+          id='thirdBox'>
+          <h4 class='dark:text-white text-xl font-bold mb-2'>A Keen eye for details</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora neque, dolor suscipit eius fugit inventore
+            provident quam magni id aliquam error nulla aspernatur eum enim impedit nesciunt iusto perferendis quis?
+          </p>
+          <div
+            class='border-t-[1rem] border-b-[1rem] border-l-[1rem] border-transparent group-hover:border-l-white dark:group-hover:border-l-darkest w-0 h-0 absolute top-1/2 -translate-y-1/2 -right-4 duration-200'
+            id='thirdBoxCursor'>
+          </div>
+        </div>
+      </div>
+      <div class='flex-[2]'>
+        <img src='/why.png' alt='leader' class='rounded-lg' />
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const firstBox = document.getElementById('firstBox');
+  const secondBox = document.getElementById('secondBox');
+  const thirdBox = document.getElementById('thirdBox');
+  const firstBoxCursor = document.getElementById('firstBoxCursor');
+  const secondBoxCursor = document.getElementById('secondBoxCursor');
+  const thirdBoxCursor = document.getElementById('thirdBoxCursor');
+
+  if (firstBox && secondBox && thirdBox && firstBoxCursor && secondBoxCursor && thirdBoxCursor) {
+    firstBox?.addEventListener('click', () => {
+      firstBox.classList.add('bg-white');
+      firstBox.classList.add('dark:bg-blackest');
+      firstBoxCursor.classList.add('border-l-white');
+      firstBoxCursor.classList.add('dark:border-l-darkest');
+      secondBox.classList.remove('bg-white');
+      secondBox.classList.remove('dark:bg-blackest');
+      secondBoxCursor.classList.remove('border-l-white');
+      secondBoxCursor.classList.remove('dark:border-l-darkest');
+      thirdBox.classList.remove('bg-white');
+      thirdBox.classList.remove('dark:bg-blackest');
+      thirdBoxCursor.classList.remove('border-l-white');
+      thirdBoxCursor.classList.remove('dark:border-l-darkest');
+    });
+    secondBox?.addEventListener('click', () => {
+      secondBox.classList.add('bg-white');
+      secondBox.classList.add('dark:bg-blackest');
+      secondBoxCursor.classList.add('border-l-white');
+      secondBoxCursor.classList.add('dark:border-l-darkest');
+      firstBox.classList.remove('bg-white');
+      firstBox.classList.remove('dark:bg-blackest');
+      firstBoxCursor.classList.remove('border-l-white');
+      firstBoxCursor.classList.remove('dark:border-l-darkest');
+      thirdBox.classList.remove('bg-white');
+      thirdBox.classList.remove('dark:bg-blackest');
+      thirdBoxCursor.classList.remove('border-l-white');
+      thirdBoxCursor.classList.remove('dark:border-l-darkest');
+    });
+    thirdBox?.addEventListener('click', () => {
+      thirdBox.classList.add('bg-white');
+      thirdBox.classList.add('dark:bg-blackest');
+      thirdBoxCursor.classList.add('border-l-white');
+      thirdBoxCursor.classList.add('dark:border-l-darkest');
+      firstBox.classList.remove('bg-white');
+      firstBox.classList.remove('dark:bg-blackest');
+      firstBoxCursor.classList.remove('border-l-white');
+      firstBoxCursor.classList.remove('dark:border-l-darkest');
+      secondBox.classList.remove('bg-white');
+      secondBox.classList.remove('dark:bg-blackest');
+      secondBoxCursor.classList.remove('border-l-white');
+      secondBoxCursor.classList.remove('dark:border-l-darkest');
+    });
+  }
+</script>

@@ -1,0 +1,62 @@
+<section class='min-h-[calc(100vh-77px)] grid place-content-center border-b border-border py-14'>
+  <div class='flex gap-2 items-center flex-col lg:flex-row'>
+    <div>
+      <h1 class='text-7xl font-bold mb-4'>
+        <span class='clip bg-gradient-to-tr from-tertiary via-pink to-secondary text-transparent'>Digi-Inn</span>
+      </h1>
+      <div class='text-3xl font-bold mb-4'>
+        <span class='clip bg-gradient-to-tr from-tertiary via-pink to-secondary text-transparent' id='typed-text'>
+        </span>
+        <!-- An Innovative IT Solutions Company -->
+        <span class='bg-gradient-to-t from-tertiary via-pink to-secondary ml-1' id='cursor'>&nbsp;</span>
+      </div>
+      <p class='text-2xl mb-6 leading-10'>
+        Digi-Inn is a house of experts help to create the digital presence of your business through variety of digital
+        channels using internet and mobile technology.
+      </p>
+      <a
+        href='/'
+        class='inline-block text-white rounded-full text-lg font-semibold px-8 py-4 bg-gradient-to-tr from-tertiary via-pink to-secondary box-shadow-primary duration-300'>
+        Our Services &rarr;</a
+      >
+    </div>
+    <div>
+      <img src='/hero.gif' alt='hero' />
+    </div>
+  </div>
+</section>
+
+<script>
+  const typedText = document.getElementById('typed-text');
+  const cursor = document.getElementById('cursor');
+  const textArray = ['An Innovative IT Solutions Company'];
+  let textArrayIndex = 0;
+  let charIndex = 0;
+  const erase = () => {
+    if (typedText && cursor)
+      if (charIndex > 0) {
+        typedText.textContent = textArray[textArrayIndex].slice(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, 30);
+      } else {
+        textArrayIndex++;
+        if (textArrayIndex > textArray.length - 1) {
+          textArrayIndex = 0;
+        }
+        setTimeout(type, 300);
+      }
+  };
+  const type = () => {
+    if (typedText && cursor)
+      if (charIndex <= textArray[textArrayIndex].length - 1) {
+        typedText.textContent += textArray[textArrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 20);
+      } else {
+        setTimeout(erase, 300);
+      }
+  };
+  document.addEventListener('DOMContentLoaded', () => {
+    type();
+  });
+</script>

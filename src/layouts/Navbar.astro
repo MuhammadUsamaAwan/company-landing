@@ -1,0 +1,80 @@
+---
+import { Icon } from 'astro-icon';
+---
+
+<nav class='fixed w-full top-0 z-10 bg-bg-light dark:bg-dark border-b border-border'>
+  <div class='flex items-center justify-between px-4 xl:max-w-6xl lg:max-w-4xl md:max-w-2xl mx-auto'>
+    <a href='/' class='py-4'>
+      <img src='/logo.png' alt='logo' width='137' height='45' class='hidden dark:block' />
+      <img src='/logo-light.png' alt='logo' width='137' height='45' class='dark:hidden' />
+    </a>
+    <ul class='flex space-x-6'>
+      <li class='hidden lg:block'><a href='/' class='py-4 px-2 font-semibold hover:text-primary'>Home</a></li>
+      <li class='hidden lg:block'><a href='/' class='py-4 px-2 font-semibold hover:text-primary'>About</a></li>
+      <li class='hidden lg:block'><a href='/' class='py-4 px-2 font-semibold hover:text-primary'>Services</a></li>
+      <li class='hidden lg:block'><a href='/' class='py-4 px-2 font-semibold hover:text-primary'>Blog</a></li>
+      <li class='hidden lg:block'><a href='/' class='py-4 px-2 font-semibold hover:text-primary'>Portfolio</a></li>
+      <li class='hidden lg:block'><a href='/' class='py-4 px-2 font-semibold hover:text-primary'>Contact</a></li>
+      <li class='lg:hidden'>
+        <button class='h-6 w-6' id='menuBtn'>
+          <Icon name='mdi:menu' />
+        </button>
+      </li>
+      <li>
+        <button class='h-6 w-6' id='themeBtn'>
+          <Icon name='mdi:white-balance-sunny' class='hover:text-primary dark:hidden' />
+          <Icon name='mdi:moon-waning-crescent' class='hover:text-primary hidden dark:block' />
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+<aside
+  class='bg-bg-light dark:bg-darkest fixed inset-0 w-80 h-full z-20 -translate-x-80 duration-500 opacity-0'
+  id='mobileMenu'>
+  <div class='border-b border-border py-4 flex justify-between items-center px-4'>
+    <a href='/'>
+      <img src='/logo.png' alt='logo' width='137' height='45' class='hidden dark:block' />
+      <img src='/logo-light.png' alt='logo' width='137' height='45' class='dark:hidden' />
+    </a>
+    <button
+      id='closeBtn'
+      class='h-10 w-10 rounded-full bg-bg-light-2 text-darker dark:bg-dark dark:text-white grid place-content-center'>
+      <Icon name='mdi:close' class='w-6 h-6' />
+    </button>
+  </div>
+  <ul class='py-5 px-4'>
+    <li><a href='/' class='py-2 font-semibold border-b border-border block'>Home</a></li>
+    <li><a href='/' class='py-2 font-semibold border-b border-border block'>About</a></li>
+    <li><a href='/' class='py-2 font-semibold border-b border-border block'>Services</a></li>
+    <li><a href='/' class='py-2 font-semibold border-b border-border block'>Blog</a></li>
+    <li><a href='/' class='py-2 font-semibold border-b border-border block'>Portfolio</a></li>
+    <li><a href='/' class='py-2 font-semibold border-b border-border block'>Contact US</a></li>
+    <li><a href='/' class='py-2 font-semibold block'>Career</a></li>
+  </ul>
+</aside>
+
+<script>
+  const mobileMenu = document.getElementById('mobileMenu');
+  document.getElementById('themeBtn')?.addEventListener('click', () => {
+    if (localStorage.theme === 'light') {
+      localStorage.theme = 'dark';
+      document.documentElement.className = 'dark';
+    } else {
+      localStorage.theme = 'light';
+      document.documentElement.className = 'light';
+    }
+  });
+  document.getElementById('menuBtn')?.addEventListener('click', () => {
+    if (mobileMenu) {
+      mobileMenu.classList.toggle('-translate-x-0');
+      mobileMenu.classList.toggle('opacity-100');
+    }
+  });
+  document.getElementById('closeBtn')?.addEventListener('click', () => {
+    if (mobileMenu) {
+      mobileMenu.classList.remove('-translate-x-0');
+      mobileMenu.classList.remove('opacity-100');
+    }
+  });
+</script>

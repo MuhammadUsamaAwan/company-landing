@@ -1,0 +1,71 @@
+---
+import Icon from 'astro-icon';
+---
+
+<footer class='bg-bg-light dark:bg-dark border-t border-border'>
+  <div
+    class='px-4 xl:max-w-6xl lg:max-w-4xl md:max-w-2xl mx-auto py-10 flex items-center justify-between flex-col lg:flex-row space-y-4'>
+    <div class='flex-1'>
+      <div class='mb-6'>
+        <img src='/logo.png' alt='logo' width='137' height='45' class='hidden dark:block' />
+        <img src='/logo-light.png' alt='logo' width='137' height='45' class='dark:hidden' />
+      </div>
+      <div class='text-lg mb-2 font-semibold text-black dark:text-white uppercase tracking-wide'>
+        Let's stay in touch
+      </div>
+      <div class='mb-10'>200+ Our users are subscribe Around the World</div>
+      <form class='flex space-x-1 sm:space-x-4'>
+        <input
+          type='email'
+          placeholder='Enter Email Here'
+          required
+          class='bg-transparent border-2 border-border rounded-lg px-3 py-1'
+        />
+        <button
+          class='inline-block text-white rounded-lg px-5 py-1.5 bg-gradient-to-tr from-tertiary via-pink to-secondary box-shadow-primary duration-300'
+          >Subsribe</button
+        >
+      </form>
+    </div>
+
+    <div class='flex-1 grid place-content-center'>
+      <div class='text-lg mb-4 font-semibold text-black dark:text-white tracking-wide'>Contact Us</div>
+      <div class='flex space-x-1 items-center mb-2'>
+        <Icon name='mdi:email' class='h-5 w-5' />
+        <span
+          >Email: <a href='mailto:info@digi-inn.com' class='hover:text-primary hover:underline'>info@digi-inn.com</a
+          ></span
+        >
+      </div>
+      <div class='flex space-x-1 items-center mb-2'>
+        <Icon name='mdi:phone' class='h-5 w-5' />
+        <span>Phone: <a href='tel:+923135099269' class='hover:text-primary hover:underline'>+92 313 5099269</a></span>
+      </div>
+      <div class='flex space-x-1 items-center'>
+        <Icon name='mdi:pin' class='h-5 w-5' />
+        <span>Address: Office # 1, 1st floor, Al-Ain Plaza, Airport Link Road, Rawalpindi</span>
+      </div>
+    </div>
+
+    <div class='flex-1 grid place-content-center'>
+      <div class='text-lg mb-4 font-semibold text-black dark:text-white tracking-wide'>Follow Us</div>
+      <div class='flex space-x-1.5'>
+        <a href='/' class='bg-bg-light-2 dark:bg-darkest rounded-full w-12 h-12 grid place-content-center'>
+          <Icon name='mdi:facebook' class='h-5 w-5' />
+        </a>
+        <a href='/' class='bg-bg-light-2 dark:bg-darkest rounded-full w-12 h-12 grid place-content-center'>
+          <Icon name='mdi:twitter' class='h-5 w-5' />
+        </a>
+        <a href='/' class='bg-bg-light-2 dark:bg-darkest rounded-full w-12 h-12 grid place-content-center'>
+          <Icon name='mdi:instagram' class='h-5 w-5' />
+        </a>
+        <a href='/' class='bg-bg-light-2 dark:bg-darkest rounded-full w-12 h-12 grid place-content-center'>
+          <Icon name='mdi:linkedin' class='h-5 w-5' />
+        </a>
+        <a href='/' class='bg-bg-light-2 dark:bg-darkest rounded-full w-12 h-12 grid place-content-center'>
+          <Icon name='mdi:youtube' class='h-5 w-5' />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
